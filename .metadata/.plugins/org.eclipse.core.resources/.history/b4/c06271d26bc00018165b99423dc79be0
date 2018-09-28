@@ -1,0 +1,27 @@
+
+public class Test {
+	public static void main(String[]args){
+		Robot robot	=new Robot();
+		robot.name = "ロボット";
+
+		robot.talk();
+		robot.walk();
+		robot.run();
+
+
+		Person a=new Person();
+		a.name="木村次郎";
+		a.age=18;
+		
+		Person b =new Person();
+		b.name="鈴木花子";
+		b.age=16;
+		
+
+		System.out.println(a.name);
+		System.out.println(a.age);
+		System.out.println(b.name);
+		System.out.println(b.age);
+	}
+
+}

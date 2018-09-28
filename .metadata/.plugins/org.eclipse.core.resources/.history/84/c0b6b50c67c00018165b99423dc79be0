@@ -1,0 +1,14 @@
+
+public class Test {
+	public static void main(String[]args){
+		Robot robot	=new Robot();
+		robot.name = "ロボット";
+
+		robot.talk();
+		robot.walk();
+		robot.run();
+
+
+	}
+
+}

@@ -1,0 +1,14 @@
+import org.omg.Messaging.SyncScopeHelper;
+
+public class Robot {
+	
+	public void talk(){
+		System.out.println(this.Robot+"が話す");
+	}
+	public void walk(){
+		System.out.println(this.Robot+"が歩く");
+	}
+	public void run(){
+		System.out.println(this.Robot+"が走る");
+	}
+}

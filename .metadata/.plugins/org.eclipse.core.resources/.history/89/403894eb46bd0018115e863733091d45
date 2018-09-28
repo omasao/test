@@ -1,0 +1,12 @@
+
+public class Test {
+	public static void main(String[]args){
+		sakita Person = new Person();
+		sakita.name="崎田真史";
+		sakita.age=29;
+		
+		System.out.println(sakita.name);
+		System.out.println(sakita.age);
+	}
+
+}
