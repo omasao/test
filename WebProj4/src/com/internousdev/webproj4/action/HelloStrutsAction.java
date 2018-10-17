@@ -3,17 +3,16 @@ package com.internousdev.webproj4.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.internousdev.webproj4.dao.HelloStrutsDAO;
+import com.internousdev.webproj4.dto.HelloStrutsDTO;
 import com.opensymphony.xwork2.ActionSupport;
-
-import test.dao.HelloStrutsDAO;
-import test.dto.HelloStrutsDTO;
 
 public class HelloStrutsAction extends ActionSupport{
 	private List<HelloStrutsDTO> HelloStrutsDTOList=new ArrayList<HelloStrutsDTO>();
 
 	public String execute(){
 		String ret=ERROR;
-		test.dao.HelloStrutsDAO dao=new HelloStrutsDAO();
+		com.internousdev.webproj4.dao.HelloStrutsDAO dao=new HelloStrutsDAO();
 
 		HelloStrutsDTOList=dao.select();
 
