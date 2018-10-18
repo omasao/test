@@ -1,12 +1,7 @@
+Listがないどうなるのか
+session含め参考書で勉強する
 
-arraylist,listがもうひとつ
-
-
-＜DAO>
-のList
-
-＜Action>
-Listの解説
+全体の流れ復習
 
 
 
@@ -14,17 +9,22 @@ Listの解説
 18　	public List<LoginDTO> select(String username,String password) {
 解説。selectの意味。
 
+<LoginAction>login
+dto=dao.select(name,password);
+DTOにDAOのselect文にname,passwordを入力した結果を代入
+
+
+
 select文,sqlの理解不足
 なんとなくしかわからない
+参考書参照
 
-<DBConnector>
-		Connection con = null;
-インスタンス化して初期値にnull代入？
 
-<HelloStrutsDTO>
-setUserIdなどのメソッドはどうしてDBからデータを取ってきたりすることがきるのか
-メソッドの指定先が書いていないが。
-DAOでインスタンスしたタイミングでなにか起きてる？
+<LoginError.jsp>
+<s:iterator value="loginDTOList">とは？
+
+
+
 
 <HelloStrutsAction.java>
 Listが入って全体的にわからない
@@ -32,7 +32,11 @@ Listが入って全体的にわからない
 <Action>のexecuteの飛び先はどう決まる？
 
 
-session awareがあるのとないのとでは、どう変わるのか
+sessionawareがあるのとないのとでは、どう変わるのか
+
+actionクラスにSessionAwareをimportする
+実装する
+	private Map<String, Object> session;
 
 <LoginAction>
 get(0),getUsername()とは？
@@ -41,4 +45,11 @@ get(0),getUsername()とは？
 
 DAO,DBConnector,Actionが難しい
 
+DBConnectorはやや理解できた
+
+Inquiry問い合わせの理解不足
+
+
+InquiryCompleteActionへの飛び方
+struts.xmlの上から順番？
 
