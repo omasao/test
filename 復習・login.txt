@@ -1,0 +1,41 @@
+*プロジェクト作成手順*
+
+１プロジェクト作成
+２Strutsフレームワークを配備
+３パッケージの作成
+４web.xmlの作成
+５struts.xmlの作成
+６DBConnectorの作成
+７MySQL JDBCの配備
+８SQLファイルの配備
+９DTOクラスの作成
+10DAOクラスの作成
+11Actionクラスの作成
+12ログインJSPファイルの作成
+13ログイン成功JSPファイルの作成
+14ログイン失敗JSPファイルの作成
+
+*LoginAction*
+
+13 throwsとthrowの違い
+
+
+*DBConnector*理解できつつある
+
+Class.forName
+道を作るクラス→使うコネクタとそのユーザーネームとパスワードが必要（フィールド）
+→Connectionインターフェイスを利用（メソッド）
+
+メソッドはgetConnectionのみ
+戻り値として、url,user,passwordを返すだけ
+（メソッドの呼び出し元に返す値）
+戻り値は１つだけだったような？
+→複数の値を返すには、データ型にして格納して返す
+インスタンス化していないから使えない、設計図のみ
+DAOでインスタンス化してはじめて使うから戻り値はDAOに入ることになる
+
+
+
+*LoginDAO*
+PreparedStatement ps=con.prepareStatement(sql);
+ResultSet rs=ps.executeQuery

@@ -1,16 +1,16 @@
 *DBConnector*
 
 17 (Connection)の意味
+→誤植。getConnectionはConnection型を戻り値として返すので不要。
 
 *sql*
 全体的にわからない単語がある
 
 *home.jsp*
-8 metaの意味
-34 #topなど
+8 metaの意味→検索上位にさせるため
+34 #topなど→CSSのIDセレクタ
 
 *login.jsp*
-55,58 謎のエラー
 71 <s:form action>のsの意味
 76　<br/>の/の意味→XHTMLの文法？
 78　<span>は使っていないが？
@@ -27,4 +27,7 @@
 
 29 loginDTO.setLoginId(resultSet.getString("login_id"));
 メソッドの中にメソッドを書くこともできる？
+
+*LoginAction.java*
+
 

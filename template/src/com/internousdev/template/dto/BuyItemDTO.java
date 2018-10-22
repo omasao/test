@@ -8,7 +8,7 @@ public class BuyItemDTO {
 	public String getItemName(){
 		return itemName;
 	}
-	public void setItemName(String itemname){
+	public void setItemName(String itemName){
 		this.itemName=itemName;
 	}
 	public String getItemPrice(){
