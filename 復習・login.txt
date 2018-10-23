@@ -34,6 +34,8 @@ Class.forName
 インスタンス化していないから使えない、設計図のみ
 DAOでインスタンス化してはじめて使うから戻り値はDAOに入ることになる
 
+*LoginDTO*
+DTOに格納するためのset、Actionに
 
 
 *LoginDAO*

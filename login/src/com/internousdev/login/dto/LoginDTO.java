@@ -19,7 +19,8 @@ public class LoginDTO {
 	}
 
 	public void setName(String name){
-		this.name=name;}
+		this.name=name;
+	}
 
 	public String getPassword(){
 		return password;
