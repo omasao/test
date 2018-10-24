@@ -34,10 +34,15 @@ Class.forName
 インスタンス化していないから使えない、設計図のみ
 DAOでインスタンス化してはじめて使うから戻り値はDAOに入ることになる
 
-*LoginDTO*
-DTOに格納するためのset、Actionに
+*LoginAction*
+18 dto=dao.select(name,password);
+		if(name.equals(dto.getName())){
+			if(password.equals(dto.getPassword())){
+				ret=SUCCESS;
+がわからない。
+なぜStringがついていないのか
+dao.selectでたとえばtaro 123が入っている。
+そもそもActonのnameはJSPで入力されたもの？
 
 
-*LoginDAO*
-PreparedStatement ps=con.prepareStatement(sql);
-ResultSet rs=ps.executeQuery
+
