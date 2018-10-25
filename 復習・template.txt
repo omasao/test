@@ -1,0 +1,28 @@
+*プロジェクト作成手順*
+
+１プロジェクト作成
+２Strutsフレームワークを配備
+３パッケージの作成
+４web.xmlの作成
+５struts.xmlの作成
+６DBConnectorの作成
+７MySQL JDBCの配備
+８SQLファイルの配備
+９DTOクラスの作成
+10DAOクラスの作成
+11Actionクラスの作成
+12ログインJSPファイルの作成
+13ログイン成功JSPファイルの作成
+14ログイン失敗JSPファイルの作成
+
+
+
+*LoginDTO*
+7	private String userName;
+	private boolean loginFlg=false;
+なんぞ？
+
+
+
+
+

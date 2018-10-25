@@ -18,10 +18,10 @@ public class LoginAction extends ActionSupport{
 		LoginDTO dto=new LoginDTO();
 		LoginDAO dao= new LoginDAO();
 
-dto=dao.select
+dto=dao.select(name,password);
 		if(name.equals(dto.getName())){
-			if(name.equals(dto.getName()))
-			{
+			if(name.equals(dto.getName())){
+				if(password.equals(dto.getPassword()))
 				ret=SUCCESS;
 			}
 		}
