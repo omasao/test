@@ -2,17 +2,16 @@ package com.internousdev.template1.dto;
 
 public class LoginDTO {
 
-	private String loginUserId;
+	private String loginId;
 	private String loginPassword;
 	private String userName;
 	private boolean loginFlg=false;
 
-
-	public String getLoginUserId() {
-		return loginUserId;
+	public String getLoginId() {
+		return loginId;
 	}
-	public void setLoginUserId(String loginUserId) {
-		this.loginUserId = loginUserId;
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
 	public String getLoginPassword() {
 		return loginPassword;
@@ -26,17 +25,10 @@ public class LoginDTO {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public boolean isLoginFlg() {
+	public boolean getLoginFlg() {
 		return loginFlg;
 	}
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
 	}
-
-
-
-	}
-
-
-
-
+}

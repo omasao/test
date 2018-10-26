@@ -16,11 +16,40 @@
 14ログイン失敗JSPファイルの作成
 
 
+特にDAO,Actionで何がしたいのか、そのためには何が必要なのかがわかっていない。
+あいまいな記憶を頼りに作っているだけ
+
+
 
 *LoginDTO*
 7	private String userName;
 	private boolean loginFlg=false;
-なんぞ？
+とは？
+
+*LoginAction*
+session
+Map
+
+
+
+16　private String result; とは？
+
+
+
+
+booleanの判定。
+getLoginFlgがtrueとは？
+
+
+*LoginDTO*
+	public boolean isLoginFlg() {
+		return loginFlg;
+自動生成するとgetLoginFlgが作れないのはなぜ？
+
+
+sessionはactionごとに記述？
+
+
 
 
 
