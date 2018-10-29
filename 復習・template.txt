@@ -18,21 +18,15 @@
 
 特にDAO,Actionで何がしたいのか、そのためには何が必要なのかがわかっていない。
 あいまいな記憶を頼りに作っているだけ
+何かコツがあれば知りたい
+
+session自体は30分が有効期限らしいが、プログラミングコード上のキーや値はいつまでも有効？
 
 
-
-*LoginDTO*
-7	private String userName;
-	private boolean loginFlg=false;
-とは？
 
 *LoginAction*
-session
-Map
 
 
-
-16　private String result; とは？
 
 
 
@@ -41,17 +35,34 @@ booleanの判定。
 getLoginFlgがtrueとは？
 
 
-*LoginDTO*
-	public boolean isLoginFlg() {
-		return loginFlg;
-自動生成するとgetLoginFlgが作れないのはなぜ？
-
-
-sessionはactionごとに記述？
 
 
 
+*UserCreateConfirmAction*
+
+sessionを書くタイミングがわからない
+JSPActionのやり取りのたび？
+
+	public String getErrorMessage() {
+		return errorMessage;
+いらないのでは？
 
 
+*UserCreateCompleteDAO*
 
+
+*BuyItemAction*
+
+20 		int intStock=Integer.parseInt(session.get("stock").toString());
+		int intPrice=Integer.parseInt(session.get("buyItem_price").toString());
+
+
+*BuyItemConfirmAction*
+
+name,idなどをsessionからとってくる場合は、getName,などはいらない？
+
+
+*MyPageDAO*
+
+sql iit.ubitはなに？
 
