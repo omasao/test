@@ -31,7 +31,7 @@ public class MyPageDAO {
 				myPageDTO.setPayment(resultSet.getString("pay"));
 			}
 		}catch(Exception e){
-			e.printStackTrace(s);;
+			e.printStackTrace();
 		}finally{
 			connection.close();
 		}
@@ -39,7 +39,7 @@ public class MyPageDAO {
 		return myPageDTO;
 	}
 
-	public int buyItemHistoryDelete(String item_transacion,String user_master_id)throws SQLException{
+	public int buyItemHistoryDelete(String item_transaction,String user_master_id)throws SQLException{
 
 		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
@@ -51,6 +51,16 @@ public class MyPageDAO {
 
 		try{
 			preparedStatement=connection.prepareStatement(sql);
+			preparedStatement.setString(1, item_transaction);
+			preparedStatement.setString(2, user_master_id);
+
+			result=preparedStatement.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			connection.close();
+		}
+		return result;
 
 
 
@@ -58,4 +68,4 @@ public class MyPageDAO {
 		}
 	}
 
-}
+

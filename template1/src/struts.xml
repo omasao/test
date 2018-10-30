@@ -35,7 +35,7 @@
 		<result name="success">userCreateComplete.jsp</result>
 		</action>
 
-		<action name="BuyItemAction" class="com.internousdev.template1.action.BuyItemConfirmAction" method="execute">
+		<action name="BuyItemAction" class="com.internousdev.template1.action.BuyItemAction" method="execute">
 		<result name="success">buyItemConfirm.jsp</result>
 		</action>
 

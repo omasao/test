@@ -25,13 +25,11 @@
 
 インターフェイス、クラスライブラリの単語をを理解したらより理解できると思う
 
-29 loginDTO.setLoginId(resultSet.getString("login_id"));
-メソッドの中にメソッドを書くこともできる？
+
 
 *LoginAction.java*
 
-*UserCreateCompleteDAO*
-DateUtilとは
+
 
 *UserCreateCompleteAction*
 19 toStringとは

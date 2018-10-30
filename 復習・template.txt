@@ -18,48 +18,35 @@
 
 特にDAO,Actionで何がしたいのか、そのためには何が必要なのかがわかっていない。
 あいまいな記憶を頼りに作っているだけ
-何かコツがあれば知りたい
+
+→jspを中心に設計図を書いてみる
+フローチャート
+
+基本的なコードの流れを覚える
+（接続する、登録する、問い合わせする、書き出すetc）
 
 session自体は30分が有効期限らしいが、プログラミングコード上のキーや値はいつまでも有効？
 
 
 
-*LoginAction*
 
 
 
 
 
 
-booleanの判定。
-getLoginFlgがtrueとは？
 
 
-
-
-
-*UserCreateConfirmAction*
-
-sessionを書くタイミングがわからない
-JSPActionのやり取りのたび？
-
-	public String getErrorMessage() {
-		return errorMessage;
-いらないのでは？
-
-
-*UserCreateCompleteDAO*
 
 
 *BuyItemAction*
 
-20 		int intStock=Integer.parseInt(session.get("stock").toString());
-		int intPrice=Integer.parseInt(session.get("buyItem_price").toString());
+
+
+
 
 
 *BuyItemConfirmAction*
-
-name,idなどをsessionからとってくる場合は、getName,などはいらない？
 
 
 *MyPageDAO*

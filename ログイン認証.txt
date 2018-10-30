@@ -29,14 +29,6 @@ select文,sqlの理解不足
 <HelloStrutsAction.java>
 Listが入って全体的にわからない
 
-<Action>のexecuteの飛び先はどう決まる？
-
-
-sessionawareがあるのとないのとでは、どう変わるのか
-
-actionクラスにSessionAwareをimportする
-実装する
-	private Map<String, Object> session;
 
 <LoginAction>
 get(0),getUsername()とは？

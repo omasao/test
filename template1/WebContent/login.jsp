@@ -80,8 +80,8 @@ table {
 			<h3>商品を購入する際はログインをお願いします</h3>
 			<s:form action="LoginAction">
 
-				<s:textfield name="LoginUserId" />
-				<s:password name="LoginPassword" />
+				<s:textfield name="loginUserId" />
+				<s:password name="loginPassword" />
 				<s:submit value="ログイン" />
 
 			</s:form>

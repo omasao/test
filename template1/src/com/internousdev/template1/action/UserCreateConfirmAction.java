@@ -2,9 +2,11 @@ package com.internousdev.template1.action;
 
 import java.util.Map;
 
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UserCreateConfirmAction extends ActionSupport{
+public class UserCreateConfirmAction extends ActionSupport implements SessionAware{
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
@@ -18,7 +20,7 @@ public class UserCreateConfirmAction extends ActionSupport{
 			&&!(loginPassword.equals(""))
 			&&!(userName.equals(""))){
 			session.put("loginUserId", loginUserId);
-			session.put("loginPssword", loginPassword);
+			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);
 		}else{
 			setErrorMessage("未入力の項目があります。");
@@ -57,6 +59,7 @@ public class UserCreateConfirmAction extends ActionSupport{
 		return session;
 	}
 
+	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
