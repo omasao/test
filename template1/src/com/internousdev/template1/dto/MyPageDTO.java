@@ -6,6 +6,7 @@ public class MyPageDTO {
 	private String totalPrice;
 	private String totalCount;
 	private String payment;
+
 	public String getItemName() {
 		return itemName;
 	}

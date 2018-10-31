@@ -7,6 +7,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware{
+
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
@@ -19,6 +20,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		if(!(loginUserId.equals(""))
 			&&!(loginPassword.equals(""))
 			&&!(userName.equals(""))){
+
 			session.put("loginUserId", loginUserId);
 			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);

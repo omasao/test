@@ -9,17 +9,17 @@ import com.internousdev.template1.dto.MyPageDTO;
 import com.internousdev.template1.util.DBConnector;
 
 public class MyPageDAO {
-	public MyPageDTO getMyPageUserInfo(String item_transaction,String user_master_id)throws SQLException{
+	public MyPageDTO getMyPageUserInfo(String item_transaction_id,String user_master_id)throws SQLException{
 
 		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
 		MyPageDTO myPageDTO=new MyPageDTO();
 
-		String sql="select iit.item_name,ubit.total_price,ubit.total_count,ubit.pay from user_buy_item_transaction Ubit leftjoin item_info_transaction iit on ubit.user_master_id=? order by ubit.insert_date desc";
+		String sql="select iit.item_name,ubit.total_price,ubit.total_count,ubit.pay from user_buy_item_transaction ubit left join item_info_transaction iit on ubit.user_master_id=? order by ubit.insert_date desc";
 
 		try{
 			PreparedStatement preparedStatement=connection.prepareStatement(sql);
-			preparedStatement.setString(1, item_transaction);
+			preparedStatement.setString(1, item_transaction_id);
 			preparedStatement.setString(2, user_master_id);
 
 			ResultSet resultSet=preparedStatement.executeQuery();
@@ -39,19 +39,19 @@ public class MyPageDAO {
 		return myPageDTO;
 	}
 
-	public int buyItemHistoryDelete(String item_transaction,String user_master_id)throws SQLException{
+	public int buyItemHistoryDelete(String item_transaction_id,String user_master_id)throws SQLException{
 
 		DBConnector dbConnector=new DBConnector();
 		Connection connection=dbConnector.getConnection();
 
-		String sql="delete from user_buy_item_transaction where item_transaction_id=? and user_id=?";
+		String sql="delete from user_buy_item_transaction where item_transaction_id=? and user_master_id=?";
 
 		PreparedStatement preparedStatement;
 		int result=0;
 
 		try{
 			preparedStatement=connection.prepareStatement(sql);
-			preparedStatement.setString(1, item_transaction);
+			preparedStatement.setString(1, item_transaction_id);
 			preparedStatement.setString(2, user_master_id);
 
 			result=preparedStatement.executeUpdate();

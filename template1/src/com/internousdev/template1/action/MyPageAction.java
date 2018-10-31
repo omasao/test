@@ -19,7 +19,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		MyPageDAO myPageDAO=new MyPageDAO();
 		MyPageDTO myPageDTO=new MyPageDTO();
 
-		//商品を削除しない場合
+		//商品履歴を削除しない場合
 		if(deleteFlg==null){
 			String item_transaction_id=session.get("id").toString();
 			String user_master_id=session.get("login_user_id").toString();
@@ -28,10 +28,11 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 			session.put("buyItem_name", myPageDTO.getItemName());
 			session.put("total_price", myPageDTO.getTotalPrice());
-			session.put("total_payment", myPageDTO.getTotalCount());
+			session.put("total_count", myPageDTO.getTotalCount());
+			session.put("total_payment", myPageDTO.getPayment());
 			session.put("message","");
 
-		//商品を削除する場合
+		//商品履歴を削除する場合
 		}else if(deleteFlg.equals("1")){
 			delete();
 		}
@@ -50,7 +51,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 		if(res>0){
 			session.put("message","商品情報を正しく削除しました。");
 		}else if(res==0){
-			session.put("message","商品の削除に失敗しました。");
+			session.put("message","商品情報の削除に失敗しました。");
 		}
 
 

@@ -5,35 +5,36 @@ import java.sql.ResultSet;
 
 import com.internousdev.template1.dto.BuyItemDTO;
 import com.internousdev.template1.util.DBConnector;
+
 public class BuyItemDAO {
 
-public BuyItemDTO getBuyItemInfo() {
+	public BuyItemDTO getBuyItemInfo() {
 
-DBConnector dbConnector = new DBConnector();
-Connection connection = dbConnector.getConnection();
-BuyItemDTO buyItemDTO = new BuyItemDTO();
-String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		BuyItemDTO buyItemDTO = new BuyItemDTO();
+		String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
 
 
-try {
+		try {
 
-PreparedStatement preparedStatement = connection.prepareStatement(sql);
-ResultSet resultSet = preparedStatement.executeQuery();
-if(resultSet.next()) {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
 
-buyItemDTO.setId(resultSet.getInt("id"));
-buyItemDTO.setItemName(resultSet.getString("item_name"));
-buyItemDTO.setItemPrice(resultSet.getInt("item_price"));
+				buyItemDTO.setId(resultSet.getInt("id"));
+				buyItemDTO.setItemName(resultSet.getString("item_name"));
+				buyItemDTO.setItemPrice(resultSet.getInt("item_price"));
 
-}
+			}
 
-} catch(Exception e) {
+		} catch(Exception e) {
 
-e.printStackTrace();
+			e.printStackTrace();
 
-}
-return buyItemDTO;
+		}
+		return buyItemDTO;
 
-}
+	}
 
 }

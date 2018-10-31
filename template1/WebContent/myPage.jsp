@@ -81,7 +81,7 @@ table {
 					</tr>
 
 
-					</tr>
+
 					<tr>
 
 						<td>値段</td>

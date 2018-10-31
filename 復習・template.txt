@@ -1,35 +1,14 @@
-*ƒvƒƒWƒFƒNƒgì¬Žè‡*
-
-‚PƒvƒƒWƒFƒNƒgì¬
-‚QStrutsƒtƒŒ[ƒ€ƒ[ƒN‚ð”z”õ
-‚RƒpƒbƒP[ƒW‚Ìì¬
-‚Sweb.xml‚Ìì¬
-‚Tstruts.xml‚Ìì¬
-‚UDBConnector‚Ìì¬
-‚VMySQL JDBC‚Ì”z”õ
-‚WSQLƒtƒ@ƒCƒ‹‚Ì”z”õ
-‚XDTOƒNƒ‰ƒX‚Ìì¬
-10DAOƒNƒ‰ƒX‚Ìì¬
-11ActionƒNƒ‰ƒX‚Ìì¬
-12ƒƒOƒCƒ“JSPƒtƒ@ƒCƒ‹‚Ìì¬
-13ƒƒOƒCƒ“¬Œ÷JSPƒtƒ@ƒCƒ‹‚Ìì¬
-14ƒƒOƒCƒ“Ž¸”sJSPƒtƒ@ƒCƒ‹‚Ìì¬
-
-
-“Á‚ÉDAO,Action‚Å‰½‚ª‚µ‚½‚¢‚Ì‚©A‚»‚Ì‚½‚ß‚É‚Í‰½‚ª•K—v‚È‚Ì‚©‚ª‚í‚©‚Á‚Ä‚¢‚È‚¢B
-‚ ‚¢‚Ü‚¢‚È‹L‰¯‚ð—Š‚è‚Éì‚Á‚Ä‚¢‚é‚¾‚¯
-
-¨jsp‚ð’†S‚ÉÝŒv}‚ð‘‚¢‚Ä‚Ý‚é
-ƒtƒ[ƒ`ƒƒ[ƒg
-
-Šî–{“I‚ÈƒR[ƒh‚Ì—¬‚ê‚ðŠo‚¦‚é
-iÚ‘±‚·‚éA“o˜^‚·‚éA–â‚¢‡‚í‚¹‚·‚éA‘‚«o‚·etcj
-
 sessionŽ©‘Ì‚Í30•ª‚ª—LŒøŠúŒÀ‚ç‚µ‚¢‚ªAƒvƒƒOƒ‰ƒ~ƒ“ƒOƒR[ƒhã‚ÌƒL[‚â’l‚Í‚¢‚Â‚Ü‚Å‚à—LŒøH
 
+¡‰ñ‚ÌECƒTƒCƒg‚ÅƒZƒbƒVƒ‡ƒ“‚ªƒ^ƒCƒ€ƒAƒEƒg‚µ‚½ê‡‚Ìjsp‚Í‚Ç‚¤‚È‚éH
+Amazon‚Ý‚½‚¢‚ÉŒã“úƒƒOƒCƒ“‚µ‚Ä‚àƒJ[ƒg‚É“ü‚Á‚Ä‚¢‚é‚±‚Æ‚Í‚È‚¢H
 
 
 
+*BuyItemCompleteDAO*
+
+17,24~29 ‚È‚ºStringŒ^H
+Œ^‚ðˆê’v‚³‚¹‚é‚½‚ßH
 
 
 
@@ -46,7 +25,14 @@ sessionŽ©‘Ì‚Í30•ª‚ª—LŒøŠúŒÀ‚ç‚µ‚¢‚ªAƒvƒƒOƒ‰ƒ~ƒ“ƒOƒR[ƒhã‚ÌƒL[‚â’l‚Í‚¢‚Â‚Ü‚Å‚
 
 
 
+
+
 *BuyItemConfirmAction*
+
+session.get("login_user_id").toString()
+—‰ð‚Í‚Å‚«‚Ä‚é‚©‚çŠµ‚ê‚é‚æ‚¤‚ÉŒJ‚è•Ô‚·
+
+@overrideŽ©‘Ì‚Í—‰ð‚Å‚«‚Ä‚¢‚é‚ªA—¬‚ê‚¢‚Ü‚¢‚¿
 
 
 *MyPageDAO*

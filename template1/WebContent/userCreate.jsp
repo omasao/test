@@ -74,78 +74,56 @@ table {
 
 			<s:if test="errorMessage !=''">
 
-<s:property value="errorMessage" escape="false" />
+				<s:property value="errorMessage" escape="false" />
 
-</s:if>
-<table>
-<s:form action="UserCreateConfirmAction">
-
-
-
-<tr>
-
-<td>
-
-<label>ログインID:</label>
-
-</td>
-<td>
-<input type="text" name="loginUserId" value="" />
-</td>
-
-</tr>
-<tr>
-
-<td>
-
-<label>ログインPASS:</label>
-
-</td>
-<td>
-<input type="text" name="loginPassword" value="" />
-</td>
-
-</tr>
+			</s:if>
+			<table>
+				<s:form action="UserCreateConfirmAction">
 
 
 
-<tr>
+					<tr>
 
-<td>
+						<td><label>ログインID:</label></td>
+						<td><input type="text" name="loginUserId" value="" /></td>
 
-<label>ユーザー名:</label>
+					</tr>
+					<tr>
 
-</td>
-<td>
+						<td><label>ログインPASS:</label></td>
+						<td><input type="text" name="loginPassword" value="" /></td>
 
-<input type="text" name="userName" value="" />
-
-</td>
-
-</tr>
-<s:submit value="登録"/>
-
-</s:form>
-</table>
+					</tr>
 
 
 
-<div>
+					<tr>
 
-<span>前画面に戻る場合は</span>
-<a href='<s:url action="HomeAction" />'>こちら</a>
+						<td><label>ユーザー名:</label></td>
+						<td><input type="text" name="userName" value="" /></td>
 
-</div>
+					</tr>
+					<s:submit value="登録" />
 
-</div>
+				</s:form>
+			</table>
 
-</div>
-<div id="footer">
 
-<div id="pr">
-</div>
 
-</div>
+			<div>
+
+				<span>前画面に戻る場合は</span> <a href='<s:url action="HomeAction" />'>こちら</a>
+
+			</div>
+
+		</div>
+
+	</div>
+	<div id="footer">
+
+		<div id="pr"></div>
+
+	</div>
 
 </body>
 </html>
